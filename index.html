@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Jump Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Jump Runner — mini</h1>
+      <button class="btn" id="restartBtn" title="Restart (R)">Restart</button>
+    </header>
+
+    <div class="panel">
+      <div class="hud">
+        <div class="score">Score: <span id="scoreEl">0</span></div>
+        <div class="score">Best: <span id="bestEl">0</span></div>
+      </div>
+      <div style="position:relative">
+        <canvas id="game" width="800" height="260" aria-label="Jumping game canvas"></canvas>
+
+        <!-- overlays -->
+        <div class="toast" id="startOverlay">
+          <div class="card">
+            <p class="title">Press <span class="key">Space</span> to Jump</p>
+            <p class="subtitle">Avoid the cacti. Survive as long as you can.</p>
+            <small>Also works with <span class="key">W</span>/<span class="key">↑</span> or tap/click.</small>
+          </div>
+        </div>
+        <div class="toast" id="gameOverOverlay" style="display:none">
+          <div class="card">
+            <p class="title" style="color:var(--danger)">Game Over</p>
+            <p class="subtitle">Score: <span id="finalScore">0</span></p>
+            <button class="btn" id="playAgain">Play again</button>
+          </div>
+        </div>
+      </div>
+      <p class="help">Controls: <strong>Space / W / ↑</strong> to jump • <strong>R</strong> to restart • Tap/Click for mobile.</p>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

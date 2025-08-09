@@ -1,0 +1,122 @@
+:root{
+  --bg:#0f1226;
+  --fg:#e6e9ff;
+  --muted:#9aa3ff;
+  --accent:#6ee7b7;
+  --danger:#ff6b6b;
+  --panel:#171a36;
+  --grid:#20254a;
+  --shadow:0 8px 24px rgba(0,0,0,.35);
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(1200px 800px at 50% -10%, #1b1f44 0%, var(--bg) 55%);
+  color: var(--fg);
+  font-family: var(--font);
+}
+
+.wrap{
+  max-width: 820px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+h1{
+  font-size: clamp(18px, 3vw, 22px);
+  margin: 0;
+  letter-spacing:.5px;
+  font-weight: 700;
+}
+
+.panel{
+  background: linear-gradient(180deg, var(--panel), #0f1230);
+  border: 1px solid #212757;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 12px;
+}
+
+.hud{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 12px;
+}
+
+.score{
+  font-variant-numeric: tabular-nums;
+  letter-spacing:.5px;
+}
+
+.btn{
+  appearance:none;
+  border:1px solid #2a2f66;
+  background: linear-gradient(180deg, #1b2050, #12163b);
+  color: var(--fg);
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor:pointer;
+  font-weight:600;
+  transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease;
+  box-shadow: 0 2px 0 #080a20;
+}
+.btn:hover{ border-color:#3a4090; }
+.btn:active{ transform: translateY(1px); }
+
+canvas{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius: 12px;
+  background:
+    linear-gradient(180deg, #0c0f28 0%, #0b0e25 50%) padding-box,
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0)) border-box;
+  border:1px solid #1f2450;
+}
+
+.help{
+  margin-top:10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+.toast { 
+  pointer-events: none;
+}
+
+
+.toast .card {
+  pointer-events: auto;
+}
+
+.title{
+  font-size: clamp(18px, 3.4vw, 26px);
+  margin:0 0 6px;
+}
+.subtitle{
+  margin:0 0 10px;
+  color: var(--muted);
+}
+.key{
+  display:inline-block;
+  padding:.1em .5em;
+  border:1px solid #39419a;
+  border-radius:6px;
+  background:#12163b;
+  margin:0 .15em;
+  font-weight:700;
+}
